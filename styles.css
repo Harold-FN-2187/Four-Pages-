@@ -16,12 +16,48 @@
 
 
  body {
-   background-color:peachpuff;
-   display: grid;
-   place-items: center;
+   background-color:var(--white);
    min-height: 100vh;
    text-wrap:balance;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
  } 
+
+  .backdrop {
+   background-color: var(--white);
+   display: flex;
+   align-items: center;
+   height: auto;
+   width: auto;
+   flex-direction: row; 
+   
+ }
+
+  .combo{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    flex:1;
+ }
+
+.box {
+  flex:1;
+  font-family: Poppins,sans-serif;
+   padding:1.5rem;
+   text-wrap: pretty;
+   background-color: var(--white);
+   border-radius: 0.313rem;
+   margin: 0.625rem;
+   margin-block-end: 0.938rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   box-shadow: 0px 0px 6px black;
+}
+
+
+
 
 .intro {
    display: flex;
@@ -30,10 +66,10 @@
    align-items: center;
    background-color: white;
    max-width:37.5rem;
-    /*add max height?*/
    font-weight: 100;
-   margin-bottom: 0;
+   margin-bottom: 0.938rem;
    font-family: Poppins,sans-serif;
+   text-align: center;
 } 
 
 .main-title {
@@ -41,10 +77,11 @@
    font-size: 1.875rem;
    font-weight:200;
    margin-bottom: 0.063rem;
+   text-align: center;
 }
 
 .subtitle {
-   color:black;
+   color:var(--grey-500);
    margin-top: 0.188rem;
    margin-bottom: 0;
    font-weight:600;
@@ -68,29 +105,6 @@
 
  }
 
- .backdrop {
-   background-color: rosybrown;
-   display: flex;
-   flex-direction: row;
-   margin-top: 0;
-   
- }
-
- .box {
-   font-family: Poppins,sans-serif;
-   padding:1.5rem;
-   text-wrap: pretty;
-   background-color: var(--white);
-   border-radius: 0.313rem;
-   margin: 0.625rem;
-   flex: 1;
-   box-shadow:;
-   margin-block-end: 0.938rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
- }
- 
  .box p  {
    color:var(--grey-400);
    font-weight: normal;
@@ -110,16 +124,8 @@
 
 
  #super {
-    border-top: 0.313rem solid var(--cyan);
-    
+    border-top: 0.313rem solid var(--cyan);  
  }
-
- /* .combo{
-    background-color: var(--orange);
-    display: flex;
-    flex-direction: column;
-    flex:1;
- } */
 
 #team {
    border-top: 0.313rem solid var(--red);
@@ -127,14 +133,11 @@
 
 #karma {
    border-top: 0.313rem solid var(--orange);
-
  }
 
  #calc {
     border-top: 0.313rem solid var(--blue);
  }
-
- 
 
  .attribution {
         font-size: 1.25rem;
@@ -149,25 +152,11 @@
       }
 
 @media  screen and (width <= 600px) {
-    body {
-        background-color: darkgoldenrod;
-    }
-
     .backdrop {
       flex-direction: column;
     }
 
     .intro {
-      /* text-align: center; */
       font-size: 0.625rem;
     }
 }
-
-/*
-Combo multiple classes / ids in opening tags
-box shadow
-use grid-start, end to "float" text and icons
-text-wrap
-line spacing in intro section
-
-*/
