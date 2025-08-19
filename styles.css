@@ -8,13 +8,6 @@
     --white:hsl(0, 0%, 100%);
  }
 
- /* 
- - Mobile: 375px
-- Desktop: 1440px
-  */
-
-
-
  body {
    background-color:var(--white);
    min-height: 100vh;
